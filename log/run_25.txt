@@ -1,5 +1,0 @@
-Running query: SELECT * FROM mytable2 WHERE id == 1
-
-id          message   
-----------  ----------
-1           foo bar   

@@ -29,7 +29,7 @@ jobs:
         run: |
           echo "Running query: ${{ github.event.issue.body }}"
           sqlite3 "${{ github.event.issue.body }}" > recent_output.txt
-          "msg=$(cat recent_output.txt" >> $GITHUB_ENV
+          "msg=$(cat recent_output.txt)" >> $GITHUB_ENV
       
       # git commit
       - name: commit

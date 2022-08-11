@@ -37,7 +37,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "github-actions"
           git add .
-          git commit -m "Query from ${{ github.event.issue.author.login }}"
+          git commit -m "Query from ${{ github.event.actor.login }}"
       
       # git push
       - name: push

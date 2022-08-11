@@ -13,12 +13,6 @@ Title: Hello World
 Body: SELECT * FROM mytable
 ```
 
-Make sure to escape quotes (similar to running commands through the command line), ex.
-
-```
-INSERT INTO mytable (messages) VALUES (\"Hello there\")
-```
-
 GitHub actions will execute the query and you'll get a reply with a link to your output file!
 
 Have fun!

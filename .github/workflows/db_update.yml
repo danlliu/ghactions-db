@@ -28,7 +28,7 @@ jobs:
       - name: Run SQL query
         run: |
           echo "Running query: ${{ github.event.issue.body }}"
-          sqlite3 "${{ github.event.issue.body }}" > recent_output.txt
+          sqlite3 db.sqlite3 "${{ github.event.issue.body }}" > recent_output.txt
           echo "msg=$(cat recent_output.txt)" >> $GITHUB_ENV
       
       # git commit

@@ -1,0 +1,4 @@
+Running query: SELECT * FROM mytable2 WHERE id < 2\n
+id          message   
+----------  ----------
+1           foo bar   

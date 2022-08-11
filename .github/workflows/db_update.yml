@@ -29,7 +29,6 @@ jobs:
         run: |
           echo "Running query: ${{ github.event.issue.body }}"
           sqlite3 -column -header db.sqlite3 "${{ github.event.issue.body }}" > log/run_${{ github.event.issue.number }}.txt
-          echo "msg=$(cat log/run_${{ github.event.issue.number }}.txt)" >> $GITHUB_ENV
       
       # git commit
       - name: commit
@@ -52,10 +51,7 @@ jobs:
         with:
           issue-number: ${{ github.event.issue.number }}
           body: |
-            Your query results:
-            ```
-            ${{ env.msg }}
-            ```
+            Your query results can be found at: [run_${{ github.event.issue.number }}.txt](log/run_${{ github.event.issue.number }}.txt)
           reactions: '+1'
       
       # close issue

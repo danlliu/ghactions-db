@@ -1,0 +1,3 @@
+Running query: SELECT * FROM mytable2 WHERE id == 1\n\nid          message   
+----------  ----------
+1           foo bar   

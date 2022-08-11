@@ -51,7 +51,7 @@ jobs:
         with:
           issue-number: ${{ github.event.issue.number }}
           body: |
-            Your query results can be found at: [run_${{ github.event.issue.number }}.txt](/log/run_${{ github.event.issue.number }}.txt)
+            Your query results can be found at: [run_${{ github.event.issue.number }}.txt](../blob/main/log/run_${{ github.event.issue.number }}.txt)
           reactions: '+1'
       
       # close issue

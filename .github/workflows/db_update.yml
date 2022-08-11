@@ -27,7 +27,7 @@ jobs:
       # you better only have the SQL query there lol
       - name: Run SQL query
         run: |
-          echo "Running query: ${{ github.event.issue.body }}\n" > log/run_${{ github.event.issue.number }}.txt
+          echo -n "Running query: ${{ github.event.issue.body }}\n\n" > log/run_${{ github.event.issue.number }}.txt
           sqlite3 -column -header db.sqlite3 '${{ github.event.issue.body }}' >> log/run_${{ github.event.issue.number }}.txt
       
       # git commit
